@@ -56,7 +56,7 @@ app.put('/completed', async (req, res) => {
     }
     const id = req.body.id;
     const foundTodo = await todoModel.findOne({ _id: id });
-    foundTodo.completed = true;
+    foundTodo.completed = !(foundTodo.completed);
     await foundTodo.save();
 
     res.status(200).json({
@@ -64,7 +64,13 @@ app.put('/completed', async (req, res) => {
     });
 });
 
-
+app.delete("/delete",async (req,res)=>{
+    const id = req.body.id;
+    await todoModel.findOneAndDelete({_id:id});
+    res.status(200).json({
+        msg: 'deleted successfully'
+    })
+})
 
 app.listen(PORT,(req,res)=>{
     console.log(`app listening at port ${PORT}`);

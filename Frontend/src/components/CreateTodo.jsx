@@ -21,7 +21,7 @@ function CreateTodo() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+    <div className="w-100 h-100 mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
       <div className="mb-4">
         <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">
           Title

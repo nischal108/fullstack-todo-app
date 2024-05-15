@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { boolean } = require('zod');
 
 try {
-    mongoose.connect('');
+    mongoose.connect();
 } catch (error) {
     console.log("error connecting to database");
 }

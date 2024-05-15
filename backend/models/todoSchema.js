@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { boolean } = require('zod');
 
 try {
-    mongoose.connect('mongodb+srv://nishchalb21:NB5TbGJNdghPRr5E@cluster0.e9ebmpn.mongodb.net/fullstacktodoapp');
+    mongoose.connect('');
 } catch (error) {
     console.log("error connecting to database");
 }
